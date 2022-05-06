@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profileback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        app:backgroundTint="#FFF"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <TextView
+        android:id="@+id/Accou_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Edit Profile"
+        android:textColor="#0D1333"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toEndOf="@+id/profileback"
+        app:layout_constraintTop_toTopOf="@+id/profileback"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileback">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="130dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/user_icon"
+                    app:civ_border_color="#000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Register_no"
+                    app:layout_constraintEnd_toEndOf="@id/conlayout"
+                    app:layout_constraintStart_toStartOf="@id/conlayout"
+                    app:layout_constraintTop_toTopOf="@id/conlayout" />
+
+                <EditText
+
+                    android:id="@+id/Register_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Register no"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                    app:layout_constraintStart_toStartOf="@+id/profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+
+                <EditText
+
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Your Name"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Register_no"
+                    app:layout_constraintStart_toStartOf="@+id/Register_no"
+                    app:layout_constraintTop_toBottomOf="@+id/Register_no" />
+
+
+                <Spinner
+                    android:id="@+id/Year"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/roundspinner"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Name"
+                    app:layout_constraintStart_toStartOf="@+id/Name"
+                    app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+                <EditText
+
+                    android:id="@+id/dob_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Date of birth"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Year"
+                    app:layout_constraintStart_toStartOf="@+id/Year"
+                    app:layout_constraintTop_toBottomOf="@+id/Year" />
+
+                <EditText
+
+                    android:id="@+id/blood_group_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Blood Group"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/dob_update"
+                    app:layout_constraintStart_toStartOf="@+id/dob_update"
+                    app:layout_constraintTop_toBottomOf="@+id/dob_update" />
+
+                <EditText
+
+                    android:id="@+id/Parents_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Parent Phone Number"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/blood_group_update"
+                    app:layout_constraintStart_toStartOf="@+id/blood_group_update"
+                    app:layout_constraintTop_toBottomOf="@+id/blood_group_update" />
+
+
+                <EditText
+                    android:id="@+id/Phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Phone College"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Parents_phone_no"
+                    app:layout_constraintStart_toStartOf="@+id/Parents_phone_no"
+                    app:layout_constraintTop_toBottomOf="@+id/Parents_phone_no" />
+
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Your Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Phone_no"
+                    app:layout_constraintStart_toStartOf="@+id/Phone_no"
+                    app:layout_constraintTop_toBottomOf="@+id/Phone_no" />
+
+                <Spinner
+                    android:id="@+id/Student_type"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/roundspinner"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Email"
+                    app:layout_constraintStart_toStartOf="@+id/Email"
+                    app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+
+                <EditText
+                    android:id="@+id/Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Your Address"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/Student_type"
+                    app:layout_constraintStart_toStartOf="@+id/Student_type"
+                    app:layout_constraintTop_toBottomOf="@+id/Student_type" />
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btn_round_red"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Update"
+                    android:textColor="#FFF"
+                    app:layout_constraintEnd_toEndOf="@+id/Address"
+                    app:layout_constraintStart_toStartOf="@+id/Address"
+                    app:layout_constraintTop_toBottomOf="@+id/Address" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginTop="24dp"
+                  app:layout_constraintEnd_toEndOf="@+id/update"
+                  app:layout_constraintStart_toStartOf="@+id/update"
+                  app:layout_constraintTop_toBottomOf="@+id/update" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

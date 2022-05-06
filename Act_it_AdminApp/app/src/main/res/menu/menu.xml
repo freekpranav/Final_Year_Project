@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <group>
+       <item
+           android:title="Home"
+           android:icon="@drawable/ic_menu"
+           app:showAsAction="always"
+           android:id="@+id/home"/>
+       <item
+           android:title="Profile"
+           android:icon="@drawable/ic_menu"
+           android:id="@+id/user"/>
+       <item
+           android:title="Resource"
+           android:icon="@drawable/ic_menu"
+           android:id="@+id/resource"/>
+       <item
+           android:title="Announcement"
+           android:icon="@drawable/ic_menu"
+           android:id="@+id/announcement"/>
+       <item
+           android:title="Task"
+           android:icon="@drawable/ic_menu"
+           android:id="@+id/task"/>
+       <item
+           android:title="Code Editor"
+           android:icon="@drawable/ic_menu"
+           android:id="@+id/editor"/>
+
+
+
+
+   </group>
+    <group>
+        <item android:title="Communications">
+            <menu>
+                <group>
+                    <item
+                        android:title="About"
+                        android:icon="@drawable/ic_menu"
+                        android:id="@+id/about"/>
+                    <item
+                        android:title="Contact"
+                        android:icon="@drawable/ic_menu"
+                        android:id="@+id/contact"/>
+                    <item
+                        android:title="Share"
+                        android:icon="@drawable/ic_menu"
+                        android:id="@+id/share"/>
+
+
+                    
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>
